@@ -1,0 +1,47 @@
+html, body {
+	height: 100vh;
+	margin: 0px;
+background: #FC354C;
+background: -webkit-linear-gradient(to left, #FC354C , #0ABFBC);
+background: linear-gradient(to left, #FC354C , #0ABFBC);
+             
+}
+
+.height {
+	height: 300px;
+}
+
+.screenfill {
+	height: 300px;
+}
+
+.yellow {
+	background-color: #cc00ff;
+}
+
+.black {
+	background-color: #ff66d9;
+}
+
+.nopadding-left {
+   padding-left: 0px;
+   margin-left: 0px;
+}
+
+.nopadding-right {
+   padding-right: 0px;
+   margin-right: 0px;
+}
+
+.padding-top {
+	padding-top: 0px;
+}
+
+.col-sm-3 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+h1 {
+	background-image: url("eric.jpg");
+}

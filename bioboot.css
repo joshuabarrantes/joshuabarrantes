@@ -1,0 +1,37 @@
+html, body {
+	margin: 10px;
+}
+
+body {
+	background-color: #999999
+}
+.screenfill {
+	height: 100vh;
+}
+
+.f-screenfill {
+	height: 100vh;
+}
+
+.g-screenfill {
+	height: 100vh;
+}
+
+
+.blue {
+	background-color: #ffffff
+}
+
+.white {
+	background-color: #ffc800
+}
+
+
+.gray {
+	background-color: #0d0d0d
+}
+
+h1 {
+    text-shadow: 2px 2px #ff4d4d;
+	font-size: 250%;
+}
