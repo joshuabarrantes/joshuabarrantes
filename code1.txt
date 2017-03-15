@@ -1,0 +1,16 @@
+import RPi.GPIO as GPIO ## Import GPIO library
+import time ## Import 'time' library. Allows us to use 'sleep'
+
+GPIO.setmode(GPIO.BOARD) ## Use board pin numbering
+GPIO.setup(23, GPIO.OUT) ## Setup GPIO Pin 7 to OUT
+
+##Define a function named Blink()
+
+turnon = raw_input("Do you want to turn on the light?");
+print(turnon);
+
+if (turnon = "y") {
+	GPIO.output(23,True);
+}
+else:
+	print("TYPE Y");
