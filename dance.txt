@@ -1,0 +1,80 @@
+from gopigo import *	#Has the basic functions for controlling the GoPiGo Robot
+import sys	#Used for closing the running program
+import pygame
+
+print "Welcome to Joshua's Dance. Its Peanut Butter Jelly Time!"
+print "Press:\n\tw: Move GoPiGo Robot forward\n\ta: Turn GoPiGo Robot left\n\td: Turn GoPiGo Robot right\n\ts: Move GoPiGo Robot backward\n\tj: Dannce \n\tt: Increase speed\n\tg: Decrease speed\n\tx: Stop GoPiGo Robot\n\tz: Exit\n"
+
+while True:
+	print "Enter the Command:",
+	a=raw_input()	# Fetch the input from the terminal
+
+	if a=='w':
+		fwd()	# Move forward
+	elif a=='a':
+		left()	# Turn left
+	elif a=='d':
+		right()	# Turn Right
+	elif a=='s':
+		bwd()	# Move back
+	elif a=='x':
+		stop()	# Stop
+	elif a=='t':
+		increase_speed()	# Increase speed
+	elif a=='g':
+		decrease_speed()	# Decrease speed
+	elif a=='j':
+		led_on(LED_L)
+		led_on(LED_R)
+		time.sleep(7)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		left()
+		time.sleep(.5)
+		right()
+		time.sleep(.5)
+		fwd()
+		time.sleep(2)
+		bwd()
+		time.sleep(2)
+		fwd()
+		time.sleep(2)
+		set_speed(250)
+		right_rot()
+		time.sleep(1.5)
+		left_rot()
+		time.sleep(1.5)
+		right_rot()
+		time.sleep(1.5)
+		left_rot()
+		time.sleep(1.5)
+	elif a=='p':
+		pygame.init()
+		pygame.mixer.init()
+		pygame.mixer.music.load("/home/pi/Desktop/Dance/Peanut Butter Jelly Time.mp3")
+		pygame.mixer.music.play()
+		pygame.mixer.music.set_volume(1)
+	elif a=='z':
+		print "Exiting"		# Exit
+		sys.exit()
+	else:
+		print "Wrong Command, Please Enter Again"
+	time.sleep(.1)

@@ -1,0 +1,57 @@
+from gopigo import *	#Has the basic functions for controlling the GoPiGo Robot
+import sys
+import time	#Used for closing the running program
+
+
+print "Prepare for the run...Good Luck user"
+print "Press:\n\tw: Start the Run!"
+
+while True:
+	print "Enter the Command:",
+	a=raw_input()	# Fetch the input from the terminal
+
+	set_left_speed(200)
+
+	if a=='w':
+		enable_encoders()
+		enc_tgt(1,1,64)
+		fwd()
+
+		while read_enc_status() :
+			time.sleep(0.1)
+
+		right()
+		time.sleep(0.5)
+
+		enable_encoders()
+		enc_tgt(1,1,36)
+		fwd()
+		while read_enc_status() :
+			time.sleep(0.1)
+
+		left()
+		time.sleep(0.7)
+
+		enable_encoders()
+		enc_tgt(1,1,95)
+		fwd()
+		while read_enc_status() :
+			time.sleep(0.1)
+
+		right()
+		time.sleep(0.5)
+		
+		enable_encoders()
+		enc_tgt(1,1,38)
+		fwd()
+		while read_enc_status() :
+			time.sleep(0.1)
+
+		left()
+		time.sleep(0.7)
+
+		enable_encoders()
+		enc_tgt(1,1,38)
+		fwd()
+		while read_enc_status() :
+			time.sleep(0.1)

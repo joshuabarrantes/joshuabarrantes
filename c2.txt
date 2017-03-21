@@ -1,0 +1,85 @@
+import RPi.GPIO as GPIO ## Import GPIO library
+import time ## Import 'time' library. Allows us to use 'sleep'
+
+GPIO.setmode(GPIO.BCM) ## Use board pin numbering
+GPIO.setup(18, GPIO.OUT) ## Setup GPIO Pin 18 to OUT
+
+##Define a function named Blink()
+
+x = 0;
+
+def turnon():
+	turnon = GPIO.output(18,GPIO.HIGH);
+
+def turnoff():
+	turnoff = GPIO.output(18,GPIO.LOW);
+
+def KeyboardHero():
+	BlinkDuration = raw_input("Press Any Key");
+	print(BlinkDuration);
+	if BlinkDuration == "1":
+		turnon()
+		time.sleep(0.1)
+		turnoff()
+		print("Blinked for one second")
+		print("X = {} x".format(x))
+	if BlinkDuration == "`":
+		turnon()
+		time.sleep(1)
+		turnoff()
+		print("Blinked for one second")
+		print("X = {} x".format(x))	 
+	elif BlinkDuration == "2":
+		turnon()
+		time.sleep(0.2)
+		turnoff()
+		print("Blinked for two second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "3":
+		turnon()
+		time.sleep(0.3)
+		turnoff()
+		print("Blinked for three second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "4":
+		turnon()
+		time.sleep(0.4)
+		turnoff()
+		print("Blinked for four second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "5":
+		turnon()
+		time.sleep(0.5)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "6":
+		turnon()
+		time.sleep(0.6)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "7":
+		turnon()
+		time.sleep(0.7)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "8":
+		turnon()
+		time.sleep(0.8)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "9":
+		turnon()
+		time.sleep(0.9)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	else:
+		print("Seriously you were given all those keys and didnt press one?");
+
+while x < 100:
+ 	KeyboardHero();
+ 	x=x+1
